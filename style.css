@@ -1,0 +1,595 @@
+/* ================= GLOBAL ================= */
+
+/*================Our Core Values====================*/
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f4f6f9;
+}
+
+/* Container */
+.spirit-container {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 10px;
+}
+
+/* Item */
+.spirit-item {
+  background: #0F2A44;
+  color: #ffffff;
+  margin-bottom: 15px;
+  padding: 20px 22px;
+  border-radius: 8px;
+  border-left: 5px solid #1f4e79;
+
+  /* Animation base */
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.6s ease forwards;
+}
+
+/* Delay tiap item biar smooth */
+.spirit-item:nth-child(1) { animation-delay: 0.1s; }
+.spirit-item:nth-child(2) { animation-delay: 0.2s; }
+.spirit-item:nth-child(3) { animation-delay: 0.3s; }
+.spirit-item:nth-child(4) { animation-delay: 0.4s; }
+.spirit-item:nth-child(5) { animation-delay: 0.5s; }
+.spirit-item:nth-child(6) { animation-delay: 0.6s; }
+
+/* Hover elegan (bukan lompat kasar) */
+.spirit-item:hover {
+  background: #12395c;
+  border-left: 5px solid #4da3ff;
+  transition: all 0.3s ease;
+}
+
+/* Title */
+.spirit-item h2 {
+  margin: 0 0 8px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* Text */
+.spirit-item p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #dbe6f2;
+}
+
+/* Smooth animation */
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* ================= HEADER ================= */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.logo {
+    height: 55px;
+}
+
+/* NAVBAR */
+.navbar a {
+    color: gold;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 600;
+    position: relative;
+}
+
+/* underline animation */
+.navbar a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: gold;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+/* ================= WHATSAPP CONTAINER ================= */
+.wa-container {
+    display: flex;
+    justify-content: center;  /* TENGAH */
+    align-items: center;
+    margin: 30px 0;
+}
+
+/* ================= WHATSAPP BUTTON ================= */
+.wa-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    background: #25D366; /* hijau WhatsApp */
+    color: white;
+
+    padding: 14px 22px;   /* BESAR */
+    border-radius: 50px;  /* BULAT MODERN */
+
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+
+    transition: 0.3s;
+}
+
+/* ICON */
+.wa-button img {
+    width: 24px;
+    height: 24px;
+}
+
+/* HOVER */
+.wa-button:hover {
+    background: #1ebe5d;
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+/* ================= HERO ================= */
+.hero {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url("images/SATU.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-title {
+    font-size: 48px;
+    color: white;
+    text-shadow: 0 0 10px rgba(0,0,0,0.7);
+}
+
+.hero-desc {
+    max-width: 700px;
+    margin-top: 15px;
+    font-size: 18px;
+    color: #f1f1f1;
+}
+
+/* ================= GRID ================= */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 20px;
+    padding: 30px;
+}
+
+/* ================= CARD ================= */
+.card {
+    background: #112240;
+    padding: 20px;
+    border-radius: 10px;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+/* ================= EQUIPMENT ================= */
+.grid-equipment {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    gap: 25px;
+    padding: 30px;
+}
+
+.equip-card {
+    background: #112240;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.4s;
+}
+
+.equip-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.equip-card h3 {
+    text-align: center;
+    color: gold;
+}
+
+.equip-card ul {
+    padding: 15px;
+    font-size: 14px;
+}
+
+.equip-card:hover {
+    transform: translateY(-10px);
+}
+
+/* ================= FOOTER ================= */
+/* ================= FOOTER NAV HOVER ================= */
+.footer-menu a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 14px;
+    position: relative;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+/* efek geser halus */
+.footer-menu a:hover {
+    color: gold;
+    transform: translateX(6px);
+}
+
+/* garis animasi bawah */
+.footer-menu a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: gold;
+    left: 0;
+    bottom: -4px;
+    transition: 0.3s;
+}
+
+/* garis muncul saat hover */
+.footer-menu a:hover::after {
+    width: 100%;
+}
+/* ================= FOOTER FIX PROPORSIONAL ================= */
+.footer {
+    background: linear-gradient(135deg, #061a3a, #0a192f);
+    padding: 40px 20px; /* lebih kecil = lebih proporsional */
+    color: white;
+    margin-top: 40px;
+}
+
+/* layout */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    align-items: flex-start; /* FIX penting */
+}
+
+/* box */
+.footer-box {
+    flex: 1;
+    min-width: 200px;
+}
+
+/* logo */
+.footer-logo {
+    width: 70px;
+    margin-bottom: 10px;
+}
+
+/* text spacing biar rapih */
+.footer-box p,
+.footer-box h3,
+.footer-box h4 {
+    margin: 6px 0;
+}
+
+/* NAVIGATION */
+.footer-menu li {
+    margin: 6px 0;
+}
+
+/* SOCIAL */
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+/* ICON */
+.sosmed {
+    width: 20px;
+}
+
+/* COPYRIGHT */
+.copyright {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 13px;
+    color: #aaa;
+}
+
+/* ================= LINKEDIN HOVER ================= */
+.linkedin:hover {
+    color: #0a66c2;
+}
+
+.linkedin:hover img {
+    filter: drop-shadow(0 0 10px #0a66c2);
+    transform: scale(1.2);
+}
+
+/* ================= MAP HOVER ================= */
+.map-link:hover {
+    color: #00d4ff;
+}
+
+.map-link:hover img {
+    filter: drop-shadow(0 0 10px #00d4ff);
+    transform: scale(1.2);
+}
+
+/* ================= MAP FIX ================= */
+.map-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 30px auto;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 450px;   /* INI YANG BIKIN BESAR */
+    border: none;
+}
+
+/* ================= COPYRIGHT ================= */
+.copyright {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 14px;
+    color: #aaa;
+}
+
+/* ================= ANIMASI ================= */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ================= EQUIPMENT CARD ================= */
+/* ================= EQUIPMENT CARD SHADOW KUNING ================= */
+.equip-card {
+    background: #112240;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.4s;
+
+    /* shadow kuning */
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.25);
+}
+
+.equip-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.8);
+}
+
+/* ================= POPUP MODAL ================= */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,0.7);
+
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #112240;
+    padding: 25px;
+    border-radius: 10px;
+    width: 350px;
+    color: white;
+    text-align: center;
+    animation: fadeIn 0.3s ease;
+}
+
+.close {
+    float: right;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0; transform: scale(0.8);}
+    to {opacity: 1; transform: scale(1);}
+}
+/* ================= HOME CARD SHADOW KUNING ================= */
+/* menu home card tulisannya  */
+.card h3 { 
+    color: gold;
+    letter-spacing: 1px;
+    font-weight: 600;
+     text-align: center;
+}
+.card {
+    background: #112240;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.4s;
+
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.25);
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.8);
+}
+
+/* ================= POPUP ================= */
+
+/* ================= ISO CARD ================= */
+.iso-card {
+    background: #112240;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.4s;
+    cursor: pointer;
+
+    /* SHADOW PUTIH */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.25);
+}
+
+.iso-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+    background: white;
+    padding: 10px;
+}
+
+/* HOVER EFFECT */
+.iso-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.8);
+}
+
+.iso-card h3 {
+    text-align: center;
+    color: gold;
+    margin: 10px 0;
+}
+/* bates */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,0.7);
+
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #112240;
+    padding: 25px;
+    border-radius: 10px;
+    width: 350px;
+    color: white;
+    text-align: center;
+}
+
+.close {
+    float: right;
+    font-size: 22px;
+    cursor: pointer;
+}
+/* ================= title ================= */
+.title {
+    text-align: center;
+    width: 100%;
+}
+/* ================= RESPONSIVE ================= */
+/* @media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar {
+        margin-top: 10px;
+    }
+
+    .hero-title {
+        font-size: 32px;
+    }
+
+    .hero {
+        height: 60vh;
+    } */
+     /* ================= MOBILE FIX TANPA MERUSAK ================= */
+@media (max-width: 768px) {
+
+    /* HANYA ATUR JUMLAH KOLOM (tidak ganggu style lain) */
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-equipment {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* HANYA KECILKAN SEDIKIT, BUKAN GANTI */
+    .card img {
+        height: auto;
+        max-height: 140px;
+    }
+
+    .equip-card img {
+        height: auto;
+        max-height: 140px;
+    }
+
+    /* FONT TETAP, HANYA DIJAGA SUPAYA TIDAK KEGEDEAN */
+    .card h3,
+    .equip-card h3 {
+        font-size: 90%;
+    }
+
+    /* CEGAH LAYOUT MELEBAR */
+    body {
+        overflow-x: hidden;
+    }
+}
+

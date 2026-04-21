@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Company - PT Mitra Alam Persada</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Company Profile PT Mitra Alam Persada - Mining Contractor Indonesia">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="header">
+
+    <img src="images/Logo1.png" class="logo" alt="PT Mitra Alam Persada Logo">
+
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">Company</a>
+        <a href="equipment.html">Equipment</a>
+        <a href="project.html">Project</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+</header>
+
+<h2 class="title">Company Profile</h2>
+
+<!-- ================= COMPANY INFO ================= -->
+<div class="card">
+    <p>PT Mitra Alam Persada adalah perusahaan kontraktor jasa pertambangan batubara.</p>
+</div>
+
+<div class="card">
+    <h4>Vision</h4>
+    <p>Being a Reliable Contractor</p>
+</div>
+
+<div class="card">
+    <h4>Mission</h4>
+    <ul>
+        <li>Safety</li>
+        <li>Production</li>
+        <li>Welfare</li>
+    </ul>
+</div>
+
+<!-- ================= ISO SECTION ================= -->
+<h2 class="title">Our Core Values</h2>
+
+<section class="spirit-container">
+
+    <div class="spirit-item">
+      <h2>S – Safety, Health and Environment</h2>
+      <p>Kami memprioritaskan keselamatan dan kesehatan pekerja, serta lingkungan sekitar. Kami berkomitmen untuk menciptakan lingkungan kerja yang aman dan sehat.</p>
+    </div>
+
+    <div class="spirit-item">
+      <h2>P – Productive</h2>
+      <p>Kami berkomitmen untuk meningkatkan produktivitas dan efisiensi dalam setiap aspek operasional. Kami berusaha untuk memberikan hasil yang terbaik dengan menggunakan sumber daya yang efektif.</p>
+    </div>
+
+    <div class="spirit-item">
+      <h2>I – Integrity (Integritas)</h2>
+      <p>Kami berkomitmen untuk menjalankan bisnis dengan integritas dan transparansi. Kami berusaha untuk membangun kepercayaan dengan stakeholder dan masyarakat.</p>
+    </div>
+
+    <div class="spirit-item">
+      <h2>R – Realized</h2>
+      <p>Kami berkomitmen untuk mewujudkan visi dan misi perusahaan. Dan kami berusaha untuk mencapai tujuan dan sasaran yang telah ditetapkan.</p>
+    </div>
+
+    <div class="spirit-item">
+      <h2>I – Improvement</h2>
+      <p>Kami berkomitmen untuk terus meningkatkan kinerja dan proses operasional. Kami berusaha untuk menjadi yang terbaik dalam industri pertambangan batubara.</p>
+    </div>
+
+    <div class="spirit-item">
+      <h2>T – Team work</h2>
+      <p>Kami berkomitmen untuk bekerja sama sebagai tim yang solid dan profesional.</p>
+    </div>
+
+  </section>
+
+
+<!-- ================= MODAL ================= -->
+<!-- <div id="isoModal" class="modal">
+
+    <div class="modal-content">
+
+        <span class="close" onclick="closeISO()">X</span>
+
+        <h2 id="iso-title"></h2>
+        <p id="iso-text"></p>
+
+    </div>
+
+</div> -->
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <div class="footer-box">
+            <img src="images/Logo1.png" class="footer-logo" alt="Logo">
+            <h3>PT Mitra Alam Persada</h3>
+            <p>Reliable Mining Contractor</p>
+        </div>
+
+        <div class="footer-box">
+            <h4>Contact</h4>
+            <p>📍 Surabaya</p>
+            <p>📧 info@mitraalam.com</p>
+            <p>📞 021-7392184</p>
+        </div>
+
+        <div class="footer-box">
+            <h4>Navigation</h4>
+            <ul class="footer-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">Company</a></li>
+                <li><a href="equipment.html">Equipment</a></li>
+                <li><a href="project.html">Project</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-box">
+            <h4>Follow Us</h4>
+
+            <a href="https://www.linkedin.com/company/mitra-alam-persada/"
+               target="_blank"
+               class="social-link linkedin">
+
+                LinkedIn
+
+            </a>
+
+        </div>
+
+    </div>
+
+    <p class="copyright">© 2026 PT Mitra Alam Persada</p>
+
+</footer>
+
+<!-- ================= SCRIPT ================= -->
+<script>
+
+function openISO(type){
+
+    const data = {
+        iso9001: {
+            title: "ISO 9001:2015 - Quality Management",
+            text: "Standar ini memastikan perusahaan memberikan layanan berkualitas dan konsisten kepada pelanggan."
+        },
+        iso14001: {
+            title: "ISO 14001:2015 - Environmental Management",
+            text: "Standar ini mengatur pengelolaan lingkungan agar dampak operasional lebih ramah lingkungan."
+        },
+        iso45001: {
+            title: "ISO 45001:2018 - Safety Management",
+            text: "Standar ini menjaga keselamatan dan kesehatan kerja agar lingkungan kerja lebih aman."
+        }
+    };
+
+    document.getElementById("iso-title").innerText = data[type].title;
+    document.getElementById("iso-text").innerText = data[type].text;
+
+    document.getElementById("isoModal").style.display = "flex";
+}
+
+function closeISO(){
+    document.getElementById("isoModal").style.display = "none";
+}
+
+// klik luar modal
+window.onclick = function(event) {
+    let modal = document.getElementById("isoModal");
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
+}
+
+</script>
+
+</body>
+</html>

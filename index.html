@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>PT Mitra Alam Persada</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PT Mitra Alam Persada - Mining Contractor Company">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+
+    <img src="images/Logo1.png" class="logo" alt="PT Mitra Alam Persada Logo">
+
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">Company</a>
+        <a href="equipment.html">Equipment</a>
+        <a href="project.html">Project</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+    <h1 class="hero-title">PT MITRA ALAM PERSADA</h1>
+
+    <p class="hero-desc">
+        Mining Services including Overburden Removal, Coal Getting, Coal Hauling, Heavy Equipment Rental
+    </p>
+</section>
+
+<!-- ================= GRID ================= -->
+<section class="grid">
+
+    <div class="card" onclick="openHome('overburden')">
+        <img src="images/SATU.jpg" alt="Overburden Removal">
+        <h3>Overburden Removal</h3>
+    </div>
+
+    <div class="card" onclick="openHome('equipment')">
+        <img src="images/Rental.jpg" alt="Heavy Equipment Rental">
+        <h3>Heavy Equipment Rental</h3>
+    </div>
+
+    <div class="card" onclick="openHome('hauling')">
+        <img src="images/Houling.jpg" alt="Coal Hauling">
+        <h3>Coal Hauling</h3>
+    </div>
+
+    <div class="card" onclick="openHome('road')">
+        <img src="images/Road.jpg" alt="Road Maintenance">
+        <h3>Road Maintenance</h3>
+    </div>
+
+    <div class="card" onclick="openHome('drilling')">
+        <img src="images/Activity.jpg" alt="Drilling Activity">
+        <h3>Drilling Activity</h3>
+    </div>
+
+    <div class="card" onclick="openHome('prep')">
+        <img src="images/Preparation.jpg" alt="Drilling Area Preparation">
+        <h3>Drilling Area Preparation</h3>
+    </div>
+
+    <div class="card" onclick="openHome('water')">
+        <img src="images/watertruk.jpg" alt="Water truk">
+        <h3>Water Truck</h3>
+    </div>
+
+</section>
+
+<!-- ================= MODAL ================= -->
+<div id="homeModal" class="modal">
+
+    <div class="modal-content">
+
+        <span class="close" onclick="closeHome()">x</span>
+
+        <h2 id="home-title"></h2>
+        <p id="home-text"></p>
+
+    </div>
+
+</div>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <div class="footer-box">
+            <img src="images/Logo1.png" class="footer-logo" alt="Logo">
+            <h3>PT Mitra Alam Persada</h3>
+            <p>Reliable Mining Contractor</p>
+        </div>
+
+        <div class="footer-box">
+            <h4>Contact</h4>
+            <p>📍 Jl. Jemursari Sel. I No.18, Surabaya</p>
+            <p>📧 info@mitraalam.com</p>
+            <p>📞 (021) 7392184</p>
+        </div>
+
+        <div class="footer-box">
+            <h4>Navigation</h4>
+            <ul class="footer-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">Company</a></li>
+                <li><a href="equipment.html">Equipment</a></li>
+                <li><a href="project.html">Project</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-box">
+            <h4>Follow Us</h4>
+
+            <a href="https://www.linkedin.com/company/mitra-alam-persada/"
+               target="_blank"
+               class="social-link linkedin">
+
+                <img src="images/linkedin.png" class="sosmed" alt="LinkedIn">
+                LinkedIn
+            </a>
+
+        </div>
+
+    </div>
+
+    <p class="copyright">
+        © 2026 PT Mitra Alam Persada
+    </p>
+
+</footer>
+
+<!-- ================= SCRIPT ================= -->
+<script>
+
+const data = {
+    overburden: {
+        title: "Overburden Removal",
+        text: "Proses pengupasan lapisan tanah penutup untuk membuka area tambang batubara."
+    },
+    equipment: {
+        title: "Heavy Equipment Rental",
+        text: "Penyediaan alat berat seperti excavator, dump truck, dan bulldozer."
+    },
+    hauling: {
+        title: "Coal Hauling",
+        text: "Pengangkutan batubara dari pit ke stockpile atau pelabuhan."
+    },
+    road: {
+        title: "Road Maintenance",
+        text: "Perawatan jalan tambang agar tetap aman dan lancar."
+    },
+    drilling: {
+        title: "Drilling Activity",
+        text: "Kegiatan pengeboran untuk eksplorasi tambang."
+    },
+    prep: {
+        title: "Drilling Area Preparation",
+        text: "Persiapan area sebelum kegiatan drilling."
+    },
+    water: {
+        title: "Water Truck",
+        text: "water truck (truk tangki air) memiliki peran yang sangat penting untuk mendukung kelancaran operasional dan menjaga keselamatan kerja."
+    }
+};
+
+function openHome(type){
+    document.getElementById("home-title").innerText = data[type].title;
+    document.getElementById("home-text").innerText = data[type].text;
+    document.getElementById("homeModal").style.display = "flex";
+}
+
+function closeHome(){
+    document.getElementById("homeModal").style.display = "none";
+}
+
+// klik luar modal
+window.onclick = function(event) {
+    let modal = document.getElementById("homeModal");
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
+}
+
+</script>
+
+</body>
+</html>

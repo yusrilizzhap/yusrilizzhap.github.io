@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Equipment - PT Mitra Alam Persada</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Heavy Equipment PT Mitra Alam Persada">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="header">
+
+    <img src="images/logo1.png" class="logo" alt="PT Mitra Alam Persada Logo">
+
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">Company</a>
+        <a href="equipment.html">Equipment</a>
+        <a href="project.html">Project</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+</header>
+
+<h2 class="title">Heavy Equipment</h2>
+
+<!-- ================= GRID ================= -->
+<section class="grid-equipment">
+
+    <div class="equip-card" onclick="openEquip('excavator')">
+        <img src="images/excavator.jpg" alt="Excavator">
+        <h3>Excavator</h3>
+    </div>
+
+    <div class="equip-card" onclick="openEquip('bulldozer')">
+        <img src="images/bulldozer.jpg" alt="Bulldozer">
+        <h3>Bulldozer</h3>
+    </div>
+
+    <div class="equip-card" onclick="openEquip('grader')">
+        <img src="images/motorgrader.jpg" alt="Motor Grader">
+        <h3>Motor Grader</h3>
+    </div>
+
+    <div class="equip-card" onclick="openEquip('drill')">
+        <img src="images/drill.jpg" alt="Drill Machine">
+        <h3>Drill Machine</h3>
+    </div>
+
+    <div class="equip-card" onclick="openEquip('dump')">
+        <img src="images/dump465.jpg" alt="Dump Truck">
+        <h3>Dump Truck</h3>
+    </div>
+
+    <div class="equip-card" onclick="openEquip('support')">
+        <img src="images/mt.jpg" alt="Support Unit">
+        <h3>Support Unit</h3>
+    </div>
+
+</section>
+
+<!-- ================= MODAL ================= -->
+<div id="equipModal" class="modal">
+
+    <div class="modal-content">
+
+        <span class="close" onclick="closeEquip()">X</span>
+
+        <h2 id="equip-title"></h2>
+        <p id="equip-text"></p>
+
+    </div>
+
+</div>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <div class="footer-box">
+            <img src="images/Logo1.png" class="footer-logo" alt="Logo">
+            <h3>PT Mitra Alam Persada</h3>
+            <p>Reliable Mining Contractor</p>
+        </div>
+
+        <div class="footer-box">
+            <h4>Contact</h4>
+            <p>📍 Surabaya</p>
+            <p>📧 info@mitraalam.com</p>
+            <p>📞 021-7392184</p>
+        </div>
+
+        <div class="footer-box">
+            <h4>Navigation</h4>
+            <ul class="footer-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">Company</a></li>
+                <li><a href="equipment.html">Equipment</a></li>
+                <li><a href="project.html">Project</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-box">
+            <h4>Follow Us</h4>
+
+            <a href="https://www.linkedin.com/company/mitra-alam-persada/"
+               target="_blank"
+               class="social-link linkedin">
+
+                LinkedIn
+            </a>
+
+        </div>
+
+    </div>
+
+    <p class="copyright">© 2026 PT Mitra Alam Persada</p>
+
+</footer>
+
+<!-- ================= SCRIPT (CLEAN VERSION) ================= -->
+<script>
+
+const equipmentData = {
+    excavator: {
+        title: "Excavator",
+        text: "Digging & loading material tambang seperti tanah, batu, dan overburden."
+    },
+    bulldozer: {
+        title: "Bulldozer",
+        text: "Mendorong material, meratakan lahan, dan membuka jalan tambang."
+    },
+    grader: {
+        title: "Motor Grader",
+        text: "Meratakan jalan tambang agar kondisi jalan stabil dan aman."
+    },
+    drill: {
+        title: "Drill Machine",
+        text: "Melakukan pengeboran untuk blasting dan eksplorasi tambang."
+    },
+    dump: {
+        title: "Dump Truck",
+        text: "Mengangkut material tambang dari pit ke stockpile atau hauling road."
+    },
+    support: {
+        title: "Support Unit",
+        text: "Manitou MT-X 733 adalah alat berat jenis telehandler yang dirancang untuk mendukung berbagai kebutuhan pengangkatan dan pemindahan material di area kerja seperti proyek konstruksi, industri, maupun pergudangan. Alat ini menggabungkan fungsi forklift, crane, dan loader dalam satu unit yang fleksibel dan efisien.."
+    }
+};
+
+function openEquip(type){
+    document.getElementById("equip-title").innerText = equipmentData[type].title;
+    document.getElementById("equip-text").innerText = equipmentData[type].text;
+    document.getElementById("equipModal").style.display = "flex";
+}
+
+function closeEquip(){
+    document.getElementById("equipModal").style.display = "none";
+}
+
+// klik luar modal (UX improvement)
+window.onclick = function(event) {
+    let modal = document.getElementById("equipModal");
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
+}
+
+</script>
+
+</body>
+</html>

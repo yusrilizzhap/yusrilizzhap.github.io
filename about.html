@@ -17,8 +17,11 @@
 <header class="header">
 
     <img src="images/Logo1.png" class="logo" alt="PT Mitra Alam Persada Logo">
+ <div class="menu-toggle" id="menu-toggle">
+        ☰
+    </div>
 
-    <nav class="navbar">
+    <nav class="navbar" id="navbar">
         <a href="index.html">Home</a>
         <a href="about.html">Company</a>
         <a href="equipment.html">Equipment</a>
@@ -151,6 +154,13 @@
 
 <!-- ================= SCRIPT ================= -->
 <script>
+
+const toggle = document.getElementById("menu-toggle");
+    const navbar = document.getElementById("navbar");
+
+    toggle.addEventListener("click", function () {
+        navbar.classList.toggle("active");
+    });
 
 function openISO(type){
 

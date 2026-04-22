@@ -9,6 +9,8 @@
     <meta name="description" content="Contact PT Mitra Alam Persada - Mining Contractor Indonesia">
 
     <link rel="stylesheet" href="style.css">
+
+
 </head>
 
 <body>
@@ -18,7 +20,11 @@
 
     <img src="images/logo1.png" class="logo" alt="PT Mitra Alam Persada Logo">
 
-    <nav class="navbar">
+    <div class="menu-toggle" id="menu-toggle">
+        ☰
+    </div>
+
+    <nav class="navbar" id="navbar">
         <a href="index.html">Home</a>
         <a href="about.html">Company</a>
         <a href="equipment.html">Equipment</a>
@@ -102,6 +108,14 @@
     </p>
 
 </footer>
+
+<script src="script.js" defer></script>
+ <script>const toggle = document.getElementById("menu-toggle");
+    const navbar = document.getElementById("navbar");
+
+    toggle.addEventListener("click", function () {
+        navbar.classList.toggle("active");
+    });</script> 
 
 </body>
 </html>
